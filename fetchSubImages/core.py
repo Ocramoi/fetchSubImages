@@ -3,7 +3,7 @@ import json
 from time import sleep
 
 
-def returnUrls(subReddit, maxN):
+def returnUrls(subReddit, maxNumberImgs):
     imgUrls = []
     cont = 0
 
@@ -14,7 +14,7 @@ def returnUrls(subReddit, maxN):
     if resp == '{"message": "Too Many Requests", "error": 429}':
         print("ERROR! Retrying...")
         sleep(2)
-        return returnUrls(subReddit, maxN)
+        return returnUrls(subReddit, maxNumberImgs)
 
     jsonf = json.loads(resp)
 
@@ -22,7 +22,7 @@ def returnUrls(subReddit, maxN):
         if post['data']['post_hint'] == "image":
             imgUrls.append(post['data']['preview']['images'][0]['source']['url'])
             cont += 1
-            if 0 < maxN == cont:
+            if 0 < maxNumberImgs == cont:
                 return imgUrls
 
     return imgUrls
