@@ -1,3 +1,19 @@
+
 # fetchSubImages
-Module that returns image file URLs for the last media in any given subreddit.  
-To use it, import the `fetchSubImages` module to your project and get the array of the images addresses in the `n` [n ∈ (0, 100)] last posts in the sub, returning only the ones containing images, in URL with the function `returnUrls(subReddit, maxNumberImgs)` (*use* `n = 0` *to return all images in the last 100 posts*).
+To install the package run `pip install fetchSubImages` in your environment.  
+The module gives utilities for fetching image posts from any given subreddit.  
+```python
+import fetchSubImages
+
+# Return the image URLs from the last 50 image posts in r/aww  
+imgUrls = fetchSubImages.returnUrls("aww", 50)  
+  
+# Return the titles from the last 50 image posts in r/aww  
+imgTitles = fetchSubImages.returnTitles("aww", 50)  
+  
+# Return the titles and image URLs from the last 50 image posts in r/aww as objects containing 'title' and 'url'  
+imgObjs = fetchSubImages.returnObjs("aww", 50)  
+  
+# Download all images in the last 50 image posts in r/aww with [title].png as filename to 'posts' folder  
+fetchSubImages.downloadImgs("aww", 50, "posts")
+```
