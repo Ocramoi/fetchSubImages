@@ -3,7 +3,7 @@ import fetchSubImages.core
 
 def returnUrls(subReddit, maxNumberImgs):
     """
-    Return the URLs from the last 'maxNumberImgs' images in the 'subReddit' sub
+    Returns the URLs from the last 'maxNumberImgs' images in the 'subReddit' sub
 
     :param subReddit: Subreddit for fetching
     :param maxNumberImgs: Maximum number of posts fetched
@@ -18,7 +18,7 @@ def returnUrls(subReddit, maxNumberImgs):
 
 def returnTitles(subReddit, maxNumberImgs):
     """
-    Return the title of the the last 'maxNumberImgs' images in the 'subReddit' sub
+    Returns the title of the the last 'maxNumberImgs' images in the 'subReddit' sub
 
     :param subReddit: Subreddit for fetching
     :param maxNumberImgs: Maximum number of posts fetched
@@ -33,7 +33,7 @@ def returnTitles(subReddit, maxNumberImgs):
 
 def returnObjs(subReddit, maxNumberImgs):
     """
-        Return the last 'maxNumberImgs' images in the 'subReddit' sub as objects containing [title] and [url]
+        Returns the last 'maxNumberImgs' images in the 'subReddit' sub as objects containing [title] and [url]
 
         :param subReddit: Subreddit for fetching
         :param maxNumberImgs: Maximum number of posts fetched
@@ -48,7 +48,7 @@ def returnObjs(subReddit, maxNumberImgs):
 
 def downloadImgs(subReddit, maxNumberImgs, folder):
     """
-        Download the last 'maxNumberImgs' images in the 'subReddit' sub to 'folder'
+        Downloads the last 'maxNumberImgs' images in the 'subReddit' sub to 'folder'
 
         :param subReddit: Subreddit for downloading
         :param maxNumberImgs: Maximum number of posts to fetch (< 0 to fetch all)
